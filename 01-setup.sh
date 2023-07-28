@@ -171,9 +171,11 @@ git init && git add . && git commit -m "Big Bang" && git branch -M main
 git remote add origin https://github.com/rahimeT/tap-gitops-3.git
 git push -u origin main
 
+echo "running configure.sh"
 cd ./clusters/full-profile
 ./tanzu-sync/scripts/configure.sh
 cd ../../
+echo "done by configure.sh"
 
 tanzu secret registry add registry-credentials --username $HARBOR_USERNAME --password $HARBOR_PASSWORD --server $HARBOR_URL --namespace default --export-to-all-namespaces
 
