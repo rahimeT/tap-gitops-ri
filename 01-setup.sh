@@ -168,7 +168,7 @@ export SOPS_AGE_KEY=$(cat ./gorkem/tmp-enc/key.txt)
 
 
 git init && git add . && git commit -m "Big Bang" && git branch -M main
-git remote add origin https://github.com/gorkemozlu/tap-gitops-3.git
+git remote add origin https://github.com/rahimeT/tap-gitops-3.git
 git push -u origin main
 
 cd ./clusters/full-profile
